@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ValueColumnTable } from "../interface";
 
-import ActionEdit from "./TableTypeCell/ActionEdit.vue";
-import IconMore from "./TableTypeCell/IconMore.vue";
-import TypePill from "./TableTypeCell/TypePill.vue";
-import Toggle from "./TableTypeCell/Toggle.vue";
+import CellCheck from "./TableTypeCell/CellCheck.vue";
+import CellDate from "./TableTypeCell/CellDate.vue";
+import CellEdit from "./TableTypeCell/CellEdit.vue";
+import CellSetting from "./TableTypeCell/CellSetting.vue";
+import CellStatus from "./TableTypeCell/CellStatus.vue";
+import CellType from "./TableTypeCell/CellType.vue";
+import CellUrl from "./TableTypeCell/CellUrl.vue";
 
 interface Cell {
     field: ValueColumnTable;
@@ -19,18 +22,24 @@ defineProps<Cell>();
         {{ value }}
     </td>
     <td class="px-6 py-4" v-else-if="field === 'pill'">
-        <TypePill :type="value" />
+        <CellType :type="value" />
     </td>
     <td class="px-6 py-4" v-else-if="field === 'switch'">
-        <Toggle />
+        <CellStatus />
     </td>
     <td class="px-6 py-4" v-else-if="field === 'edit'">
-        <ActionEdit />
+        <CellEdit />
     </td>
     <td class="px-6 py-4" v-else-if="field === 'setting'">
-        <IconMore />
+        <CellSetting />
+    </td>
+    <td class="px-6 py-4" v-else-if="field === 'date'">
+        <CellDate :time="value" />
+    </td>
+    <td class="px-6 py-4" v-else-if="field === 'url'">
+        <CellUrl :url="value" />
     </td>
     <td class="px-6 py-4" v-else="field === 'check'">
-        <input type="checkbox" />
+        <CellCheck />
     </td>
 </template>

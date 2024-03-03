@@ -35,6 +35,18 @@ const columnsTable: ColumnTable[] = [
         order: true,
     },
     {
+        field: "date",
+        headerName: "Date",
+        value: "date",
+        order: true,
+    },
+    {
+        field: "url",
+        headerName: "URL",
+        value: "url",
+        order: true,
+    },
+    {
         field: "type",
         headerName: "Type",
         value: "pill",
@@ -63,6 +75,8 @@ const rowsTable = [
         age: 23,
         type: "frontend",
         lastName: "Munoz",
+        date: new Date(),
+        url: "https://google.com",
     },
     {
         id: 10,
@@ -70,6 +84,8 @@ const rowsTable = [
         age: 50,
         type: "backend",
         lastName: "Quiroz",
+        date: new Date(),
+        url: "https://google.com",
     },
     {
         id: 130,
@@ -77,6 +93,8 @@ const rowsTable = [
         age: 20,
         type: "Q&A",
         lastName: "Asis",
+        date: new Date(),
+        url: "https://google.com",
     },
     {
         id: 111,
@@ -84,6 +102,8 @@ const rowsTable = [
         age: 35,
         type: "fullstack",
         lastName: "Perea",
+        date: new Date(),
+        url: "https://google.com",
     },
 ];
 </script>

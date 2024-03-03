@@ -1,10 +1,12 @@
 export type ValueColumnTable =
+    | "number"
+    | "string"
+    | "url"
+    | "date"
     | "check"
     | "switch"
     | "edit"
     | "pill"
-    | "string"
-    | "number"
     | "setting";
 
 export interface ColumnTable {
