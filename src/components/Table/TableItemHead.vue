@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ColumnTable } from "../../interface";
+import { ColumnTable } from "./interface";
 
 interface Props extends ColumnTable {}
 

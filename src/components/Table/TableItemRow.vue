@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ColumnTable, RowsTable } from "../../interface";
+import { ColumnTable, RowsTable } from "./interface";
 
 import TableItemCell from "./TableItemCell.vue";
 

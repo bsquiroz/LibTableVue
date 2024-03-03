@@ -2,7 +2,7 @@
 import LayoutVue from "./components/Layout.vue";
 
 import Table from "./components/Table/Table.vue";
-import { ColumnTable } from "./interface";
+import { ColumnTable } from "./components/Table/interface";
 
 const columnsTable: ColumnTable[] = [
     {
@@ -86,7 +86,6 @@ const rowsTable = [
 
 <template>
     <LayoutVue>
-        <h2>Custom table</h2>
         <Table :columns="columnsTable" :rows="rowsTable" />
     </LayoutVue>
 </template>
