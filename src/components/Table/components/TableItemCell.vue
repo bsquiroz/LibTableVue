@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ValueColumnTable } from "./interface";
+import { ValueColumnTable } from "../interface";
 
 import ActionEdit from "./TableTypeCell/ActionEdit.vue";
 import IconMore from "./TableTypeCell/IconMore.vue";

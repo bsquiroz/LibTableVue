@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ColumnTable, RowsTable } from "./interface";
-import TableItemHead from "./TableItemHead.vue";
-import TableItemRow from "./TableItemRow.vue";
+import TableItemHead from "./components/TableItemHead.vue";
+import TableItemRow from "./components/TableItemRow.vue";
 
 interface Props {
     columns: ColumnTable[];
