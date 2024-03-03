@@ -7,5 +7,7 @@ defineProps<Props>();
 </script>
 
 <template>
-    <a :href="url" target="_blank">clic</a>
+    <td class="px-6 py-4">
+        <a :href="url" target="_blank">clic</a>
+    </td>
 </template>

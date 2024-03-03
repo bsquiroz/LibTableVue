@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { parseDate } from "../../helpers";
-
 interface Props {
-    time: number;
+    value: string | number;
 }
 
 defineProps<Props>();
@@ -10,6 +8,6 @@ defineProps<Props>();
 
 <template>
     <td class="px-6 py-4">
-        <span>{{ parseDate(time, true) }}</span>
+        <span>{{ value }}</span>
     </td>
 </template>

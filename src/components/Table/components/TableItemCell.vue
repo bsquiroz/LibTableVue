@@ -3,6 +3,7 @@ import { ValueColumnTable } from "../interface";
 
 import CellCheck from "./TableTypeCell/CellCheck.vue";
 import CellDate from "./TableTypeCell/CellDate.vue";
+import CellDefault from "./TableTypeCell/CellDefault.vue";
 import CellEdit from "./TableTypeCell/CellEdit.vue";
 import CellSetting from "./TableTypeCell/CellSetting.vue";
 import CellStatus from "./TableTypeCell/CellStatus.vue";
@@ -18,28 +19,12 @@ defineProps<Cell>();
 </script>
 
 <template>
-    <td class="px-6 py-4" v-if="field === 'string' || field === 'number'">
-        {{ value }}
-    </td>
-    <td class="px-6 py-4" v-else-if="field === 'pill'">
-        <CellType :type="value" />
-    </td>
-    <td class="px-6 py-4" v-else-if="field === 'switch'">
-        <CellStatus />
-    </td>
-    <td class="px-6 py-4" v-else-if="field === 'edit'">
-        <CellEdit />
-    </td>
-    <td class="px-6 py-4" v-else-if="field === 'setting'">
-        <CellSetting />
-    </td>
-    <td class="px-6 py-4" v-else-if="field === 'date'">
-        <CellDate :time="value" />
-    </td>
-    <td class="px-6 py-4" v-else-if="field === 'url'">
-        <CellUrl :url="value" />
-    </td>
-    <td class="px-6 py-4" v-else="field === 'check'">
-        <CellCheck />
-    </td>
+    <CellCheck v-if="field === 'check'" />
+    <CellType v-else-if="field === 'pill'" :type="value" />
+    <CellStatus v-else-if="field === 'switch'" />
+    <CellEdit v-else-if="field === 'edit'" />
+    <CellSetting v-else-if="field === 'setting'" />
+    <CellDate v-else-if="field === 'date'" :time="value" />
+    <CellUrl v-else-if="field === 'url'" :url="value" />
+    <CellDefault v-else :value="value" />
 </template>

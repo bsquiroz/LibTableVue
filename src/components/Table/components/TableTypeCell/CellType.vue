@@ -17,9 +17,11 @@ const stylesType = computed(() => ({
 </script>
 
 <template>
-    <span
-        class="inline-block px-2 py-1 text-xs rounded-full"
-        :class="stylesType"
-        >{{ type }}</span
-    >
+    <td class="px-6 py-4">
+        <span
+            class="inline-block px-2 py-1 text-xs rounded-full"
+            :class="stylesType"
+            >{{ type }}</span
+        >
+    </td>
 </template>
