@@ -19,7 +19,7 @@ defineProps<Props>();
                     <TableItemHead
                         v-for="(column, i) in columns"
                         :key="i"
-                        v-bind="column"
+                        :column="column"
                     />
                 </tr>
             </thead>
