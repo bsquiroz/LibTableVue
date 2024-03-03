@@ -10,10 +10,7 @@ defineProps<Props>();
     <th v-if="value === 'check'" class="px-6 py-3">
         <input type="checkbox" />
     </th>
-    <th
-        v-else-if="value === 'string' || value === 'number'"
-        class="px-6 py-3 cursor-pointer"
-    >
+    <th v-else-if="order" class="px-6 py-3 cursor-pointer">
         <div class="flex items-center group">
             {{ headerName }}
             <span

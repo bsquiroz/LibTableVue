@@ -11,6 +11,7 @@ export interface ColumnTable {
     field: string;
     headerName: string;
     value: ValueColumnTable;
+    order?: boolean;
 }
 
 export type RowsTable = Record<string | symbol, any>;

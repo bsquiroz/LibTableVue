@@ -14,21 +14,25 @@ const columnsTable: ColumnTable[] = [
         field: "id",
         headerName: "ID",
         value: "string",
+        order: true,
     },
     {
         field: "name",
         headerName: "Name",
         value: "string",
+        order: true,
     },
     {
         field: "lastName",
         headerName: "last Name",
         value: "string",
+        order: true,
     },
     {
         field: "age",
         headerName: "Age",
         value: "number",
+        order: true,
     },
     {
         field: "type",
