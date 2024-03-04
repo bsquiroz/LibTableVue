@@ -8,6 +8,8 @@ defineProps<Props>();
 
 <template>
     <td class="px-6 py-4">
-        <a :href="url" target="_blank">clic</a>
+        <a :href="url" target="_blank">{{
+            url.length > 17 ? `${url.slice(0, 17)}...` : url
+        }}</a>
     </td>
 </template>
