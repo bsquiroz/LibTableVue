@@ -13,6 +13,7 @@ import CellBodyUrl from "./TableBodyCell/CellBodyUrl.vue";
 interface Cell {
     field: ValueColumnTable;
     value: any;
+    id: string | number;
 }
 
 defineProps<Cell>();

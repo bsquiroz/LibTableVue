@@ -13,13 +13,14 @@ const props = defineProps<Props>();
 const cells = props.columns.map((column) => {
     const field = column.value;
     const value = props.row[column.field];
-    return { field, value };
+    const id = props.row["id"];
+    return { field, value, id };
 });
 </script>
 
 <template>
     <tr class="table__row">
-        <TableItemCell v-for="(cell, i) in cells" :key="i" v-bind="cell" />
+        <TableItemCell v-for="cell in cells" :key="cell.id" v-bind="cell" />
     </tr>
 </template>
 
