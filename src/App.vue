@@ -56,11 +56,6 @@ const columnsTable: ColumnTable[] = [
         value: "switch",
     },
     {
-        field: "edit",
-        headerName: "Edit",
-        value: "edit",
-    },
-    {
         field: "setting",
         headerName: "",
         value: "setting",
@@ -78,7 +73,6 @@ const rowsTable = [
         date: new Date().getTime(),
         url: "https://google.com",
         status: true,
-        edit: false,
         setting: false,
     },
     {
@@ -91,7 +85,6 @@ const rowsTable = [
         date: new Date().getTime(),
         url: "https://google.com",
         status: false,
-        edit: false,
         setting: false,
     },
     {
@@ -104,7 +97,6 @@ const rowsTable = [
         date: 1580706000000,
         url: "https://google.com",
         status: false,
-        edit: false,
         setting: false,
     },
     {
@@ -117,7 +109,6 @@ const rowsTable = [
         date: new Date().getTime(),
         url: "https://google.com",
         status: true,
-        edit: false,
         setting: false,
     },
     {
@@ -130,7 +121,6 @@ const rowsTable = [
         date: 1643864400000,
         url: "https://google.com",
         status: true,
-        edit: false,
         setting: false,
     },
 ];

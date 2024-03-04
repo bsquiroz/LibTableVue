@@ -5,7 +5,6 @@ export type ValueColumnTable =
     | "date"
     | "check"
     | "switch"
-    | "edit"
     | "pill"
     | "setting";
 
