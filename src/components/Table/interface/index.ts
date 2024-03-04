@@ -15,4 +15,9 @@ export interface ColumnTable {
     order?: boolean;
 }
 
+export interface ConfigTable {
+    checks: boolean;
+    settings: boolean;
+}
+
 export type RowsTable = Record<string | symbol, any>;

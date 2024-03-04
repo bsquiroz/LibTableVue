@@ -6,11 +6,6 @@ import { ColumnTable } from "./components/Table/interface";
 
 const columnsTable: ColumnTable[] = [
     {
-        field: "check",
-        headerName: "Checkout",
-        value: "check",
-    },
-    {
         field: "name",
         headerName: "Campaing name",
         value: "string",
@@ -49,85 +44,70 @@ const columnsTable: ColumnTable[] = [
         headerName: "Publish",
         value: "publish",
     },
-    {
-        field: "setting",
-        headerName: "",
-        value: "setting",
-    },
 ];
 
 const rowsTable = [
     {
-        check: false,
         id: 9,
         name: "Campaing zool",
         createdBy: "Andres",
         status: "published",
-        lastName: "perez",
         creationDate: 1672549200000,
         publishDate: 1672635600000,
         url: "https://google.com",
         publish: true,
-        setting: false,
     },
     {
-        check: false,
         id: 1001,
         name: "Campaing all",
         createdBy: "Zarai",
         status: "published",
-        lastName: "Munoz",
         creationDate: 1675227600000,
         publishDate: 1675314000000,
         url: "https://google.com",
         publish: false,
-        setting: false,
     },
     {
-        check: false,
         id: 10,
         name: "Campaing boll",
         createdBy: "Pablo",
         status: "paused",
-        lastName: "Quiroz",
         creationDate: 1677646800000,
         publishDate: 1677733200000,
         url: "https://google.com",
         publish: false,
-        setting: false,
     },
     {
-        check: false,
         id: 130,
         name: "Campaing dell",
         createdBy: "Daniel",
         status: "disabled",
-        lastName: "Asis",
         creationDate: 1680325200000,
         publishDate: 1680411600000,
         url: "https://google.com",
         publish: true,
-        setting: false,
     },
     {
-        check: false,
         id: 1111,
         name: "Campaing bill",
         createdBy: "Marcos",
         status: "pending",
-        lastName: "Perea",
         creationDate: 1682917200000,
         publishDate: 1683003600000,
         url: "https://google.com",
         publish: true,
-        setting: false,
     },
 ];
+
+const config = {
+    checks: false,
+    settings: false,
+};
 </script>
 
 <template>
     <LayoutVue>
-        <Table :columns="columnsTable" :rows="rowsTable" />
+        <Table :columns="columnsTable" :rows="rowsTable" :config="config" />
     </LayoutVue>
 </template>
 

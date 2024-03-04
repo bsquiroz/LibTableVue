@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ColumnTable, RowsTable } from "./interface";
+import { ColumnTable, ConfigTable, RowsTable } from "./interface";
 import TableItemHead from "./components/TableItemHead.vue";
 import TableItemRow from "./components/TableItemRow.vue";
 import { useTable } from "./hook/useTable";
@@ -7,13 +7,14 @@ import { useTable } from "./hook/useTable";
 interface Props {
     columns: ColumnTable[];
     rows: RowsTable[];
+    config: ConfigTable;
 }
 
 const props = defineProps<Props>();
 
 const { initTable, columnsTable, rowsTableComputed } = useTable();
 
-initTable(props.columns, props.rows);
+initTable(props.columns, props.rows, props.config);
 </script>
 
 <template>

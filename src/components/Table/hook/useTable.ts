@@ -1,6 +1,6 @@
 import { computed, ref } from "vue";
 
-import { ColumnTable, RowsTable } from "../interface";
+import { ColumnTable, ConfigTable, RowsTable } from "../interface";
 
 type ORDER_SORTED = "desc" | "asc" | null;
 
@@ -13,6 +13,8 @@ interface Sorted {
 const columnsTable = ref<ColumnTable[]>([]);
 const rowsTable = ref<RowsTable[]>([]);
 
+const configTable = ref<ConfigTable>({ checks: false, settings: false });
+
 const sorted = ref<Sorted>({
     field: null,
     value: null,
@@ -20,9 +22,33 @@ const sorted = ref<Sorted>({
 });
 
 export function useTable() {
-    const initTable = (columns: ColumnTable[], rows: RowsTable[]) => {
+    const initTable = (
+        columns: ColumnTable[],
+        rows: RowsTable[],
+        config: ConfigTable
+    ) => {
         columnsTable.value = columns;
         rowsTable.value = rows;
+
+        if (config.checks) {
+            configTable.value.checks = config.checks;
+
+            columnsTable.value.unshift({
+                field: "check",
+                headerName: "Checkout",
+                value: "check",
+            });
+        }
+
+        if (config.settings) {
+            configTable.value.settings = config.settings;
+
+            columnsTable.value.push({
+                field: "setting",
+                headerName: "",
+                value: "setting",
+            });
+        }
     };
 
     const rowsTableComputed = computed(() => {
@@ -84,5 +110,6 @@ export function useTable() {
         columnsTable,
         sorted,
         handleSorted,
+        configTable,
     };
 }
