@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ValueColumnTable } from "../interface";
 
-import CellCheck from "./TableTypeCell/CellCheck.vue";
-import CellDate from "./TableTypeCell/CellDate.vue";
-import CellDefault from "./TableTypeCell/CellDefault.vue";
-import CellEdit from "./TableTypeCell/CellEdit.vue";
-import CellSetting from "./TableTypeCell/CellSetting.vue";
-import CellStatus from "./TableTypeCell/CellStatus.vue";
-import CellType from "./TableTypeCell/CellType.vue";
-import CellUrl from "./TableTypeCell/CellUrl.vue";
+import CellCheck from "./TableBodyCell/CellBodyCheck.vue";
+import CellDate from "./TableBodyCell/CellBodyDate.vue";
+import CellDefault from "./TableBodyCell/CellBodyDefault.vue";
+import CellEdit from "./TableBodyCell/CellBodyEdit.vue";
+import CellSetting from "./TableBodyCell/CellBodySetting.vue";
+import CellStatus from "./TableBodyCell/CellBodyStatus.vue";
+import CellType from "./TableBodyCell/CellBodyType.vue";
+import CellUrl from "./TableBodyCell/CellBodyUrl.vue";
 
 interface Cell {
     field: ValueColumnTable;

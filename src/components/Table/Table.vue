@@ -2,13 +2,18 @@
 import { ColumnTable, RowsTable } from "./interface";
 import TableItemHead from "./components/TableItemHead.vue";
 import TableItemRow from "./components/TableItemRow.vue";
+import { useTable } from "./hook/useTable";
 
 interface Props {
     columns: ColumnTable[];
     rows: RowsTable[];
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
+
+const { initTable, columnsTable, rowsTableComputed } = useTable();
+
+initTable(props.columns, props.rows);
 </script>
 
 <template>
@@ -17,8 +22,8 @@ defineProps<Props>();
             <thead class="table__head">
                 <tr>
                     <TableItemHead
-                        v-for="(column, i) in columns"
-                        :key="i"
+                        v-for="column in columnsTable"
+                        :key="column.field"
                         :column="column"
                     />
                 </tr>
@@ -26,8 +31,8 @@ defineProps<Props>();
 
             <tbody>
                 <TableItemRow
-                    v-for="(row, i) in rows"
-                    :key="i"
+                    v-for="row in rowsTableComputed"
+                    :key="row.id"
                     :row="row"
                     :columns="columns"
                 />

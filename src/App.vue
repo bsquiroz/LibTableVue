@@ -13,7 +13,7 @@ const columnsTable: ColumnTable[] = [
     {
         field: "id",
         headerName: "ID",
-        value: "string",
+        value: "number",
         order: true,
     },
     {
@@ -44,7 +44,6 @@ const columnsTable: ColumnTable[] = [
         field: "url",
         headerName: "URL",
         value: "url",
-        order: true,
     },
     {
         field: "type",
@@ -70,12 +69,21 @@ const columnsTable: ColumnTable[] = [
 
 const rowsTable = [
     {
+        id: 9,
+        name: "Zara",
+        age: 20,
+        type: "backend",
+        lastName: "perez",
+        date: new Date().getTime(),
+        url: "https://google.com",
+    },
+    {
         id: 1001,
         name: "Brayan",
         age: 23,
         type: "frontend",
         lastName: "Munoz",
-        date: new Date(),
+        date: new Date().getTime(),
         url: "https://google.com",
     },
     {
@@ -84,7 +92,7 @@ const rowsTable = [
         age: 50,
         type: "backend",
         lastName: "Quiroz",
-        date: new Date(),
+        date: 1580706000000,
         url: "https://google.com",
     },
     {
@@ -93,16 +101,16 @@ const rowsTable = [
         age: 20,
         type: "Q&A",
         lastName: "Asis",
-        date: new Date(),
+        date: new Date().getTime(),
         url: "https://google.com",
     },
     {
-        id: 111,
+        id: 1111,
         name: "Mariana",
         age: 35,
         type: "fullstack",
         lastName: "Perea",
-        date: new Date(),
+        date: 1643864400000,
         url: "https://google.com",
     },
 ];
