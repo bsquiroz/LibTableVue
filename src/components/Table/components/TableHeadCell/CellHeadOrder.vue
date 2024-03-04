@@ -11,24 +11,39 @@ const props = defineProps<Props>();
 
 const { handleSorted, sorted } = useTable();
 
-const classActiveFilter = computed(() => ({
-    "opacity-100": sorted.value.field === props.column.field,
+const classActiveFilterAsc = computed(() => ({
+    "opacity-100":
+        sorted.value.field === props.column.field &&
+        sorted.value.order === "asc",
+}));
+
+const classActiveFilterDesc = computed(() => ({
+    "opacity-100":
+        sorted.value.field === props.column.field &&
+        sorted.value.order === "desc",
 }));
 </script>
 
 <template>
     <th class="px-6 py-3 cursor-pointer">
-        <div
-            class="flex items-center group"
-            @click="handleSorted(column.field, column.value)"
-        >
+        <div class="flex items-center group">
             {{ column.headerName }}
-            <span
-                class="material-symbols-outlined text-base group-hover:opacity-100 opacity-0"
-                :class="classActiveFilter"
-            >
-                unfold_more
-            </span>
+            <div class="flex flex-col items-center">
+                <span
+                    class="material-symbols-outlined text-base cursor-pointer opacity-0 hover:opacity-100 group-hover:opacity-100"
+                    @click="handleSorted(column.field, column.value, 'asc')"
+                    :class="classActiveFilterAsc"
+                >
+                    arrow_drop_up
+                </span>
+                <span
+                    class="material-symbols-outlined text-base cursor-pointer opacity-0 hover:opacity-100 group-hover:opacity-100"
+                    @click="handleSorted(column.field, column.value, 'desc')"
+                    :class="classActiveFilterDesc"
+                >
+                    arrow_drop_down
+                </span>
+            </div>
         </div>
     </th>
 </template>
