@@ -98,16 +98,11 @@ const rowsTable = [
         publish: true,
     },
 ];
-
-const config = {
-    checks: false,
-    settings: false,
-};
 </script>
 
 <template>
     <LayoutVue>
-        <Table :columns="columnsTable" :rows="rowsTable" :config="config" />
+        <Table :columns="columnsTable" :rows="rowsTable" />
     </LayoutVue>
 </template>
 

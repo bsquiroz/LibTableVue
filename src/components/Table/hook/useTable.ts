@@ -1,20 +1,10 @@
 import { computed, ref } from "vue";
 
-import { ColumnTable, ConfigTable, RowsTable } from "../interface";
-
-type ORDER_SORTED = "desc" | "asc" | null;
-
-interface Sorted {
-    field: string | null;
-    value: string | number | null;
-    order: ORDER_SORTED;
-}
+import { ColumnTable, ConfigTable, RowsTable, Sorted } from "../interface";
 
 const columnsTable = ref<ColumnTable[]>([]);
 const rowsTable = ref<RowsTable[]>([]);
-
 const configTable = ref<ConfigTable>({ checks: false, settings: false });
-
 const sorted = ref<Sorted>({
     field: null,
     value: null,
@@ -25,12 +15,12 @@ export function useTable() {
     const initTable = (
         columns: ColumnTable[],
         rows: RowsTable[],
-        config: ConfigTable
+        config?: ConfigTable
     ) => {
         columnsTable.value = columns;
         rowsTable.value = rows;
 
-        if (config.checks) {
+        if (config?.checks) {
             configTable.value.checks = config.checks;
 
             columnsTable.value.unshift({
@@ -40,7 +30,7 @@ export function useTable() {
             });
         }
 
-        if (config.settings) {
+        if (config?.settings) {
             configTable.value.settings = config.settings;
 
             columnsTable.value.push({

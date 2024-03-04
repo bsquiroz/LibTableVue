@@ -7,7 +7,7 @@ import { useTable } from "./hook/useTable";
 interface Props {
     columns: ColumnTable[];
     rows: RowsTable[];
-    config: ConfigTable;
+    config?: ConfigTable;
 }
 
 const props = defineProps<Props>();

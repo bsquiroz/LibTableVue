@@ -1,3 +1,5 @@
+type ORDER_SORTED = "desc" | "asc" | null;
+
 export type ValueColumnTable =
     | "number"
     | "string"
@@ -15,9 +17,15 @@ export interface ColumnTable {
     order?: boolean;
 }
 
+export interface Sorted {
+    field: string | null;
+    value: string | number | null;
+    order: ORDER_SORTED;
+}
+
 export interface ConfigTable {
-    checks: boolean;
-    settings: boolean;
+    checks?: boolean;
+    settings?: boolean;
 }
 
 export type RowsTable = Record<string | symbol, any>;
