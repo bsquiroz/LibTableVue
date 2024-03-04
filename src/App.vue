@@ -69,6 +69,7 @@ const columnsTable: ColumnTable[] = [
 
 const rowsTable = [
     {
+        check: false,
         id: 9,
         name: "Zara",
         age: 20,
@@ -76,8 +77,12 @@ const rowsTable = [
         lastName: "perez",
         date: new Date().getTime(),
         url: "https://google.com",
+        status: true,
+        edit: false,
+        setting: false,
     },
     {
+        check: false,
         id: 1001,
         name: "Brayan",
         age: 23,
@@ -85,8 +90,12 @@ const rowsTable = [
         lastName: "Munoz",
         date: new Date().getTime(),
         url: "https://google.com",
+        status: false,
+        edit: false,
+        setting: false,
     },
     {
+        check: false,
         id: 10,
         name: "Stiven",
         age: 50,
@@ -94,8 +103,12 @@ const rowsTable = [
         lastName: "Quiroz",
         date: 1580706000000,
         url: "https://google.com",
+        status: false,
+        edit: false,
+        setting: false,
     },
     {
+        check: false,
         id: 130,
         name: "Mariano",
         age: 20,
@@ -103,8 +116,12 @@ const rowsTable = [
         lastName: "Asis",
         date: new Date().getTime(),
         url: "https://google.com",
+        status: true,
+        edit: false,
+        setting: false,
     },
     {
+        check: false,
         id: 1111,
         name: "Mariana",
         age: 35,
@@ -112,6 +129,9 @@ const rowsTable = [
         lastName: "Perea",
         date: 1643864400000,
         url: "https://google.com",
+        status: true,
+        edit: false,
+        setting: false,
     },
 ];
 </script>
