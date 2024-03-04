@@ -4,8 +4,8 @@ export type ValueColumnTable =
     | "url"
     | "date"
     | "check"
-    | "switch"
-    | "pill"
+    | "publish"
+    | "status"
     | "setting";
 
 export interface ColumnTable {
