@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <td class="px-6 py-4">
+    <td class="pl-3">
         <input type="checkbox" />
     </td>
 </template>
