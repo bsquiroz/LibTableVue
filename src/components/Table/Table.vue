@@ -43,7 +43,7 @@ initTable(props.columns, props.rows);
 
 <style scoped>
 .content__table {
-    @apply relative overflow-x-auto shadow-md sm:rounded-lg;
+    @apply relative  shadow-md sm:rounded-lg;
 }
 
 .table {
